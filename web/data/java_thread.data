@@ -1,0 +1,40 @@
+<div>
+	&nbsp;
+</div>
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q1</span> What is a Thread?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		In Java, "thread" means two different things:</br>
+		<b>An instance of class java.lang.Thread.</b></br>
+		<b>A thread of execution.</b></br>
+		An instance of Thread is just an object. Like any other object in Java, it has variables and methods, and lives and dies on the heap. But a thread of execution is an individual process (a "lightweight" process) that has its own call stack. In Java, there is one thread per call stack or, to think of it in reverse, one call stack per thread. Even if you don't create any new threads in your program, threads are back there running.</br>
+		The main() method, that starts the whole ball rolling, runs in one thread, called (surprisingly) the main thread. If you looked at the main call stack (and you can, any time you get a stack trace from something that happens after main begins, but not within another thread), you'd see that main() is the first method on the stack the method at the bottom. But as soon as you create a new thread, a new stack materializes and methods called from that thread run in a call stack that's separate from the main() call stack.
+	</div>
+</div>
+
+
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q2</span> What is difference between thread and process?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		<b>Differences between threads and processes are:-</b></br>
+1. Threads share the address space of the process that created it; processes have their own address.</br>
+2. Threads have direct access to the data segment of its process; processes have their own copy of the data segment of the parent process.</br>
+3. Threads can directly communicate with other threads of its process; processes must use interprocess communication to communicate with sibling processes.</br>
+4. Threads have almost no overhead; processes have considerable overhead.</br>
+5. New threads are easily created; new processes require duplication of the parent process.</br>
+6. Threads can exercise considerable control over threads of the same process; processes can only exercise control over child processes.</br>
+7. Changes to the main thread (cancellation, priority change, etc.) may affect the behavior of the other threads of the process; changes to the parent process do not affect child processes.
+	</div>
+</div>

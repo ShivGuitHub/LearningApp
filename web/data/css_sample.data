@@ -1,0 +1,29 @@
+<div>
+	&nbsp;
+</div>
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q1</span> What is CSS ?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		The full form of CSS is Cascading Style Sheets. It is a styling language which is simple enough for HTML elements. It is popular in web designing, and its application is common in XHTML also.
+	</div>
+</div>
+
+
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q2</span> What is the origin of CSS ?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		Standard Generalized Markup Language marked the beginning of style sheets in 1980s.
+	</div>
+</div>

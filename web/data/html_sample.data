@@ -1,0 +1,30 @@
+<div>
+	&nbsp;
+</div>
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q1</span> What is HTML?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		HTML is short for HyperText Markup Language, and is the language of the World Wide Web. It is the standard text formatting language used for creating and displaying pages on the Web. HTML documents are made up of two things: the content and the tags that formats it for proper display on pages.
+	</div>
+</div>
+
+
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q2</span> What are tags?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		Content is placed in between HTML tags 0in order to properly format it. It makes use of the less than symbol (<) and the greater than symbol (>). A slash symbol is also used as a closing tag. For example:
+		<code>&lt;strong&gt;sample&lt;/strong&gt;</code>
+	</div>
+</div>

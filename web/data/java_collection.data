@@ -1,0 +1,36 @@
+<div>
+	&nbsp;
+</div>
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q1</span> What is difference between ArrayList and vector?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		<b>1) Synchronization -</b>&nbsp;&nbsp;ArrayList is not thread-safe whereas Vector is thread-safe. In Vector class each method like add(), get(int i) is surrounded 	with a synchronized block and thus making Vector class thread-safe.
+		</br>
+		<b>2) Data growth -</b>&nbsp;&nbsp;Internally, both the ArrayList and Vector hold onto their contents using an Array. When an element is inserted into an ArrayList or a Vector, the object will need to expand its internal array if it runs out of room. A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent.
+	</div>
+</div>
+
+
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q2</span> How can Arraylist be synchronized without using Vector?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		<b>Arraylist can be synchronized using:</b>
+		</br>
+		Collection.synchronizedList(List list)</br>
+		Other collections can be synchronized:</br>
+		Collection.synchronizedMap(Map map)</br>
+		Collection.synchronizedCollection(Collection c)</br>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div>
+	&nbsp;
+</div>
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q1</span>  What is an Exception?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		The exception is said to be thrown whenever an exceptional event occurs in java which signals that something is not correct with the code written and may give unexpected result. An exceptional event is a occurrence of condition which alters the normal program flow. Exceptional handler is the code that does something about the exception.
+	</div>
+</div>
+
+
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge">Q2</span> Exceptions are defined in which java package?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		All the exceptions are subclasses of <b>java.lang.Exception</b>
+	</div>
+</div>

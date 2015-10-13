@@ -1,0 +1,52 @@
+<div>
+	&nbsp;
+</div>
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge" >Q1</span>  What is Metadata?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		Metadata is termed as "Data about content of the data" and it is found in the catalog of libraries. Practically, it is used at back side of book to see the necessary topic.
+	</div>
+</div>
+
+
+<div>
+	<div id="questdata" class="alert alert-danger"> 
+		<span class="badge" >Q2</span> What is the difference between VB and VB.Net?
+	</div>
+	<div class="alert alert-success" id="managedata">	
+		<span class="label label-danger">
+			Ans: -
+		</span>
+		</br>
+		<b>Following are the differences between VB and VB.Net:</b></br>
+		<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>VB</th>
+        <th>VB.Net</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Interpreted</td>
+        <td>Compiler Language</td>
+      </tr>
+	  <tr>
+        <td>Exception Handling by 'On Error Goto'</td>
+        <td>Exception Handling by 'Try Catch'</td>
+      </tr>
+	  <tr>
+        <td>Cannot develop multi-threaded applications</td>
+        <td>Can develop multi thread applications</td>
+      </tr>
+    </tbody>
+  </table>
+
+	</div>
+</div>
