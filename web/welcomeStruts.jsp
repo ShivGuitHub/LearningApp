@@ -16,7 +16,7 @@
         <logic:notPresent name="org.apache.struts.action.MESSAGE" scope="application">
             <div  style="color: red">
                 ERROR:  Application resources not loaded -- check servlet container
-                logs for error messages.
+                logs for error messages. working
             </div>
         </logic:notPresent>
         
