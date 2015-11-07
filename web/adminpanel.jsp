@@ -5,6 +5,8 @@
 --%>
 
 <!DOCTYPE html>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+
 <html ng-app="myApp" ng-controller="subjectController">
     <head>
         <meta charset="utf-8">
@@ -27,20 +29,16 @@
 
         <div class="container openfont">
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                <li><a data-toggle="tab" href="#menuSubject">Subject Container</a></li>
-                <li><a data-toggle="tab" href="#menuQuestion">Question Container</a></li>
+                <li class="active"><a data-toggle="tab" href="#home"><bean:message key="admin.tab.home"/></a></li>
+                <li><a data-toggle="tab" href="#menuSubject"><bean:message key="admin.tab.subject"/></a></li>
+                <li><a data-toggle="tab" href="#menuQuestion"><bean:message key="admin.tab.question"/></a></li>
             </ul>
 
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
             <div class="container"> 
-                <div class="jumbotron" >  
-                    <img src="images/recycling.gif" class="img-rounded img-responsive center-block" alt="Learning Power" > 
-                    <img src="images/mind_power_new.jpg" class="img-rounded img-responsive center-block" alt="Mind Power" > 
-                </div>
                 </br>			  
-                <p id="lacontext" class="labgcolor">@LA provides the most efficient way to learn.</p>
+                <p id="lacontext" class="labgcolor">Windows Error::10053 - An established connection was aborted by the software in your host machine.</p>
             </div>
                 </div>
                 <div id="menuSubject" class="tab-pane fade">
