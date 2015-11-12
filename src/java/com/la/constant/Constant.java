@@ -30,6 +30,6 @@ public class Constant {
     public static final int TABLE_ALREADY_EXIST_EXCEPTION = -1003;
     
     
-    //Admin Table Testing
+    //Admin Table  
     public static final String ADMIN_SUBJECT_TABLE ="CREATE TABLE SUBJECTCONTAINER(SUBJECTID SMALLINT, SUBJECTNAME TEXT)";
 }
