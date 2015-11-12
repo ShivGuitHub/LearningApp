@@ -13,10 +13,22 @@ function alertDivProcess(alertDivMsg,timeDelay){
 
 function processAlertDiv(alertDivMsg,timeDelay)
 {
-   
     $('#alertid').show();
     $('#alertid').html("Last Operation:::::: " + alertDivMsg.concat("<div id='timeid'> [  " + new Date($.now()) + " ] </div>"));
     //inter = setInterval("processAlertDivHide()", 2000);
+
+}
+
+function alertQuestDivProcess(alertDivMsg,timeDelay){
+processAlertQuestDiv(alertDivMsg,timeDelay);
+        
+}
+
+function processAlertQuestDiv(alertDivMsg,timeDelay)
+{
+    $('#alertquestid').show();
+    $('#alertquestid').html("Last Operation:::::: " + alertDivMsg.concat("<div id='timeid'> [  " + new Date($.now()) + " ] </div>"));
+  
 
 }
 

@@ -234,3 +234,68 @@ app.controller('subjectController', function($scope,$http) {
 });
 
 
+app.controller('questPreviewController', function($scope,$http) {
+     alertQuestDivProcess('Loading Page',0);
+     $scope.insertAndShowPreview  = function() {
+  
+        if(typeof $scope.QUESTID=='undefined' || $scope.QUESTID=="")
+        {  
+            alertDivMsgQuestId = 'Quest ID is mandatory field; it should be filled by number only';
+            //alert(alertDivMsgQuestId);
+            alertQuestDivProcess(alertDivMsgQuestId,timeDelay);
+
+            return false;
+        }
+        if(typeof $scope.QUESTSUBJECT=='undefined' || $scope.QUESTSUBJECT=="")
+        {
+            alertDivMsgQuestSubject = 'Quest Subject is mandatory field';
+            //alert(alertDivMsgQuestSubject);
+            alertQuestDivProcess(alertDivMsgQuestSubject,timeDelay);
+            return false;
+        }
+        if(typeof $scope.QUESTANSWER=='undefined' || $scope.QUESTANSWER=="")
+        {
+            alertDivMsgQuestAnswer = 'Quest Answewr is mandatory field';
+            //alert(alertDivMsgQuestAnswer);
+            alertQuestDivProcess(alertDivMsgQuestAnswer,timeDelay);
+            return false;
+        }
+         alertQuestDivProcess("Preview process is loading...",timeDelay);
+         
+        /*
+        $http({
+            method: 'POST',
+            url: 'SubjectAddControlProcess',
+            params :  {
+                subjectId :$scope.SUBJECTID,
+                subjectName : $scope.SUBJECTNAME
+            }
+        })
+        .success(function (response,httpStatus) {
+ 
+            var tempAddControlProcess = angular.toJson(response);
+            var processData= JSON.parse(tempAddControlProcess);
+            //alert(processData.DESCRIPTION + ", Status: " + processData.RSTATUS )
+            if(processData.RSTATUS==1)
+            {
+                $scope.lasubjects.push({
+                    'SUBJECTID':$scope.SUBJECTID, 
+                    'SUBJECTNAME': $scope.SUBJECTNAME
+                });
+
+               
+            }
+            var alertDivMsgAddControlProcess = processData.DESCRIPTION;
+            //console.log(alertDivMsgAddControlProcess);
+            alertDivProcess(alertDivMsgAddControlProcess,timeDelay);
+            alertDivMsgAddControlProcess='';
+        })
+        .error(function (response,httpStatus) {
+            //alert('Request to Server Failed: - ' + httpStatus);	
+            var alertDivMsgalertDivMsgAddControlProcessError = 'Request to Server Failed: - ' + httpStatus;
+            alertDivProcess(alertDivMsgalertDivMsgAddControlProcessError,timeDelay);
+            alertDivMsgalertDivMsgAddControlProcessError = '';
+        });
+        */
+    }
+});

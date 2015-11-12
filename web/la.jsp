@@ -95,9 +95,11 @@
                 </p>
             </div>
             <div class="container" id="contain"> 
-                <div class="jumbotron" >            
-                    <img src="images/recycling.gif" class="img-rounded img-responsive center-block" alt="Learning Power" > 
-                    <img src="images/mind_power_new.jpg" class="img-rounded img-responsive center-block" alt="Mind Power" > 
+                <div class="jumbotron" >      
+                    <img src="images/lanywhere.png" class="img-rounded img-responsive center-block" alt="LearningAnywhere" >
+                    <!--<img src="images/mind_power_new.jpg" class="img-rounded img-responsive center-block" alt="Mind Power" > -->
+                    <!--<img src="images/recycling.gif" class="img-rounded img-responsive center-block" alt="Learning Power" > -->
+                    
                 </div>
                 <div>
                     <span id="signupmap" class="glyphicon glyphicon-user" data-toggle="modal" data-target="#signupmapModal"> SignUp</span> 

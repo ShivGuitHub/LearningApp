@@ -32,16 +32,17 @@
                 <li class="active"><a data-toggle="tab" href="#home"><bean:message key="admin.tab.home"/></a></li>
                 <li><a data-toggle="tab" href="#menuSubject"><bean:message key="admin.tab.subject"/></a></li>
                 <li><a data-toggle="tab" href="#menuQuestion"><bean:message key="admin.tab.question"/></a></li>
+                 <li><a data-toggle="tab" href="#menuPreview"><bean:message key="admin.tab.preview"/></a></li>
             </ul>
 
             <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-            <div class="container"> 
-                </br>			  
-                <p id="lacontext" class="labgcolor">Windows Error::10053 - An established connection was aborted by the software in your host machine.</p>
-            </div>
+                <div id="home" class="tab-pane">
+                    <div class="container"> 
+                        </br>			  
+                        <p id="lacontext" class="labgcolor">Windows Error::10053 - An established connection was aborted by the software in your host machine.</p>
+                    </div>
                 </div>
-                <div id="menuSubject" class="tab-pane fade">
+                <div id="menuSubject" class="tab-pane">
                     <br/>
                     <div class="row">
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"></div>
@@ -60,7 +61,7 @@
                     <form class="form-inline" role="form">
                         <div class="form-group">
                             <span class="glyphicon glyphicon-info-sign"></span> 
-                            <input type="number" class="form-control" name="subjectid" id="subjectid" ng-model="SUBJECTID" placeholder="Enter Subject Id" >
+                            <input type="number" class="form-control" name="subjectid" min="1" id="subjectid" ng-model="SUBJECTID" placeholder="Enter Subject Id" >
                         </div>
                         <div class="form-group">
                             <span class="glyphicon glyphicon-book"></span>
@@ -112,7 +113,6 @@
                                                 </td>
                                                 <td>
                                                     <span id ="removerowid"class="glyphicon glyphicon-remove removecolor" ng-click="subjectRemoveProcess(subject.SUBJECTID);"></span> 
-
                                                 </td>          
                                             </tr>
                                         </tbody>
@@ -126,8 +126,32 @@
                         <img src="images/loading.gif" class="img-rounded img-responsive center-block" alt="Loading..." > 
                     </div>
                 </div>
-                <div id="menuQuestion" class="tab-pane fade">
+                <div id="menuQuestion" class="tab-pane">
                     <h3>Question Container</h3>
+                </div>
+                <div id="menuPreview" class="tab-pane active">
+                    <br/>
+                    <br/>
+                    <div class="container" ng-controller="questPreviewController"> 
+                        <div class="center-block well well-sm" id="alertquestid"></div>
+                        <br/>
+                        <form class="form-group" role="form">
+                            <div class="row">
+                                <div class="form-group col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                    <span class="glyphicon glyphicon-pencil"></span> 
+                                    <input type="number" class="form-control" name="questid" min="1" id="questid" ng-model="QUESTID" placeholder="QuestId" >
+                                </div>
+                                <div class="form-group col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <input type="text" class="form-control" name="questsubject" id="questsubject" ng-model="QUESTSUBJECT" placeholder="Enter Question Subject">
+                                </div>
+                             </div>
+                            <div class="input-group">
+                                <textarea class="form-control custom-control" rows="16"  name="questanswer" id="questanswer" ng-model="QUESTANSWER" style="resize:none"></textarea>     
+                                <span class="input-group-addon btn btn-primary" ng-click="insertAndShowPreview();">Preview</span>
+                           </div>
+                    </form> 
+                    </div>
                 </div>
             </div>
         </div>

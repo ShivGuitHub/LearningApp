@@ -46,6 +46,7 @@ pre {
 .labgcolor
 {   
     background-color: #1971AA;
+    /*  Facebook Color */
     /*background-color: #2A2A2A;*/
  }
 
@@ -159,7 +160,7 @@ pre {
     bottom: 0;
 }
 
-#alertid{
+#alertid, #alertquestid{
     text-align: center;
 }
 .boxed-grey {
@@ -242,4 +243,8 @@ cursor: pointer;
 .removecolor
 {
     color: #3596e0;
+}
+
+#questid{
+    text-align:center;
 }
