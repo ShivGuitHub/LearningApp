@@ -33,6 +33,10 @@
         <servlet-name>SubjectUpdateControlProcess</servlet-name>
         <servlet-class>com.la.controller.SubjectUpdateControlProcess</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QuestAddControlProcess</servlet-name>
+        <servlet-class>com.la.controller.QuestPreviewAddControlProcess</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>action</servlet-name>
         <url-pattern>*.cgi</url-pattern>
@@ -52,6 +56,10 @@
     <servlet-mapping>
         <servlet-name>SubjectUpdateControlProcess</servlet-name>
         <url-pattern>/SubjectUpdateControlProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestAddControlProcess</servlet-name>
+        <url-pattern>/QuestAddControlProcess</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
