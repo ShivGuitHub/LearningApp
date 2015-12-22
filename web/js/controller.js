@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['xeditable']);
+var app = angular.module('myApp', ['xeditable','ngSanitize']);
 var timeDelay = 2000;
 var tempSubjectName = '';
 var tempSubjectID = '';

@@ -13,17 +13,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Learning Anywhere</title>
 
-        <link rel="icon" type="image/ico" href="images/favicon.ico"/> 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link type="text/css" rel="icon" type="image/ico" href="images/favicon.ico"/> 
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="css/app.css">
-        <link href="css/xeditable.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/xeditable.css" >
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/app.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/xeditable.js"></script>
+        <script type="text/javascript" src ="js/angular-sanitize.js"></script>
         <script type="text/javascript" src="js/controller.js"></script>
-        <script src="js/xeditable.js"></script>
+        
     </head>
     <body>
 
@@ -32,7 +34,7 @@
                 <li class="active"><a data-toggle="tab" href="#home"><bean:message key="admin.tab.home"/></a></li>
                 <li><a data-toggle="tab" href="#menuSubject"><bean:message key="admin.tab.subject"/></a></li>
                 <li><a data-toggle="tab" href="#menuQuestion"><bean:message key="admin.tab.question"/></a></li>
-                 <li><a data-toggle="tab" href="#menuPreview"><bean:message key="admin.tab.preview"/></a></li>
+                <li><a data-toggle="tab" href="#menuPreview"><bean:message key="admin.tab.preview"/></a></li>
             </ul>
 
             <div class="tab-content">
@@ -137,23 +139,50 @@
                         <br/>
                         <form class="form-group" role="form">
                             <div class="row">
+                                <!--
                                 <div class="form-group col-xs-1 col-sm-1 col-md-1 col-lg-1">
                                     <span class="glyphicon glyphicon-pencil"></span> 
                                     <input type="number" class="form-control" name="questid" min="1" id="questid" ng-model="QUESTID" placeholder="QuestId" >
                                 </div>
+                                -->
                                 <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <span class="glyphicon glyphicon-user"></span>
-                                     <textarea class="form-control custom-control" rows="2"  name="questsubject" placeholder="Enter Question Subject" id="questsubject" ng-model="QUESTSUBJECT" style="resize:none"></textarea>     
+                                    <textarea class="form-control custom-control" rows="2"  name="questsubject" placeholder="Enter Question Subject" id="questsubject" ng-model="QUESTSUBJECT" style="resize:none"></textarea>     
                                 </div>
-                             </div>
+                            </div>
                             <div class="input-group">
                                 <textarea class="form-control custom-control" rows="16"  name="questanswer" id="questanswer" ng-model="QUESTANSWER" style="resize:none"></textarea>     
-                                <span class="input-group-addon btn btn-primary" ng-click="insertAndShowPreview();">Preview</span>
-                           </div>
-                    </form> 
+                                <span class="input-group-addon btn btn-primary"  data-toggle="modal" data-target="#questPreviewModal">Preview</span>
+                                <!--
+                                    <span class="input-group-addon btn btn-primary" ng-click="insertAndShowPreview();">Preview</span>
+                                -->
+                            </div>
+                        </form> 
+
+                        <div class="modal fade"  data-keyboard="false" id="questPreviewModal" role="dialog" >
+                            <div class="modal-dialog ">
+                                <!-- Question Preview Container-->
+                                <div class="modal-content">
+                                    <div class="modal-header labgcolor" style="padding:15px 30px;">
+                                        <h4><span class="glyphicon glyphicon-lock"></span> Preview </h4>
+                                    </div>
+                                    <div class="modal-body" style="padding:15px 25px;">
+                                        <div>
+                                            <div ng-bind-html="QUESTSUBJECT"></div>
+                                            <div ng-bind-html="QUESTANSWER"></div>    
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal" ><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> 
+                        </div>
                     </div>
+
                 </div>
             </div>
-        </div>
     </body>
 </html>
