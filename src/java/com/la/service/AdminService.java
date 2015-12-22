@@ -16,7 +16,7 @@ public class AdminService {
         int status = adminTableCreation();
         if(status == 1)
         {
-            System.out.println("Admin Table::SUBJECTCONTAINER has been created successfully");
+            System.out.println("Admin Tables have been created successfully!!");
         }
         
     }

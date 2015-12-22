@@ -243,7 +243,6 @@ app.controller('questPreviewController', function($scope,$http) {
             alertDivMsgQuestId = 'Quest ID is mandatory field; it should be filled by number only';
             //alert(alertDivMsgQuestId);
             alertQuestDivProcess(alertDivMsgQuestId,timeDelay);
-
             return false;
         }
         if(typeof $scope.QUESTSUBJECT=='undefined' || $scope.QUESTSUBJECT=="")
@@ -262,33 +261,27 @@ app.controller('questPreviewController', function($scope,$http) {
         }
          alertQuestDivProcess("Preview process is loading...",timeDelay);
          
-        /*
+       
         $http({
             method: 'POST',
-            url: 'SubjectAddControlProcess',
+            url: 'QuestPreviewControlProcess',
             params :  {
-                subjectId :$scope.SUBJECTID,
-                subjectName : $scope.SUBJECTNAME
+                questionId :$scope.QUESTID,
+                questionSubject : $scope.QUESTSUBJECT,
+                questionAnswer : $scope.QUESTANSWER
             }
         })
         .success(function (response,httpStatus) {
+            alert("It is working !!")
  
-            var tempAddControlProcess = angular.toJson(response);
-            var processData= JSON.parse(tempAddControlProcess);
-            //alert(processData.DESCRIPTION + ", Status: " + processData.RSTATUS )
-            if(processData.RSTATUS==1)
-            {
-                $scope.lasubjects.push({
-                    'SUBJECTID':$scope.SUBJECTID, 
-                    'SUBJECTNAME': $scope.SUBJECTNAME
-                });
-
-               
-            }
-            var alertDivMsgAddControlProcess = processData.DESCRIPTION;
-            //console.log(alertDivMsgAddControlProcess);
-            alertDivProcess(alertDivMsgAddControlProcess,timeDelay);
-            alertDivMsgAddControlProcess='';
+//            var tempQuestPreviewControlProcess = angular.toJson(response);
+//            var processData= JSON.parse(tempQuestPreviewControlProcess);
+//            alert(processData.DESCRIPTION + ", Status: " + processData.RSTATUS )
+//           
+//            var alertDivMsgAddControlProcess = processData.DESCRIPTION;
+//            //console.log(alertDivMsgAddControlProcess);
+//            alertDivProcess(alertDivMsgAddControlProcess,timeDelay);
+//            alertDivMsgAddControlProcess='';
         })
         .error(function (response,httpStatus) {
             //alert('Request to Server Failed: - ' + httpStatus);	
@@ -296,6 +289,6 @@ app.controller('questPreviewController', function($scope,$http) {
             alertDivProcess(alertDivMsgalertDivMsgAddControlProcessError,timeDelay);
             alertDivMsgalertDivMsgAddControlProcessError = '';
         });
-        */
+        
     }
 });

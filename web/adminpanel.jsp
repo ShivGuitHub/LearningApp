@@ -141,9 +141,9 @@
                                     <span class="glyphicon glyphicon-pencil"></span> 
                                     <input type="number" class="form-control" name="questid" min="1" id="questid" ng-model="QUESTID" placeholder="QuestId" >
                                 </div>
-                                <div class="form-group col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <span class="glyphicon glyphicon-user"></span>
-                                    <input type="text" class="form-control" name="questsubject" id="questsubject" ng-model="QUESTSUBJECT" placeholder="Enter Question Subject">
+                                     <textarea class="form-control custom-control" rows="2"  name="questsubject" placeholder="Enter Question Subject" id="questsubject" ng-model="QUESTSUBJECT" style="resize:none"></textarea>     
                                 </div>
                              </div>
                             <div class="input-group">
